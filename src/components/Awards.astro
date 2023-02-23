@@ -1,0 +1,21 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+const indexes = Astro.props.indexes;
+---
+
+<div
+  class="w-full flex gap-10 md:gap-14 lg:gap-20 items-center justify-center mt-32 mb-24"
+>
+  {
+    indexes.map((i) => (
+      <Picture
+        src={`images/awards/${i}.png`}
+        widths={[500, 400, 200]}
+        aspectRatio={1.506}
+        sizes="(max-width: 800px) 100vw, 800px"
+        alt="descriptive text"
+        class="opacity-60 w-20 md:w-24 lg:w-28"
+      />
+    ))
+  }
+</div>

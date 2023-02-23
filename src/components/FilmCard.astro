@@ -1,0 +1,39 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+
+const { title, year, img, slug } = Astro.props.film;
+const index = Astro.props.index;
+---
+
+<div class="flex flex-col">
+  <Image
+    src="/public/images/film-card-images/test.jpg"
+    alt="Greenfingers Film Still 1"
+    format="webp"
+    width={475}
+    height={542}
+  />
+  <div class="flex items-center ml-4 -mt-10">
+    <h2
+      class="text-5xl text-transparent font-black tracking-tight text-outline pr-1"
+    >
+      0{index + 1}
+    </h2>
+    <div class="text-white flex flex-col pt-1">
+      <h2
+        class="leading-none text-3xl font-bold tracking-tighter whitespace-nowrap"
+      >
+        {title}
+      </h2>
+      <p class="leading-none font-medium tracking-tighter self-end mr-10">
+        {year}
+      </p>
+    </div>
+  </div>
+</div>
+<style>
+  .text-outline {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
+</style>
