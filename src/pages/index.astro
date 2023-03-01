@@ -102,6 +102,44 @@ import Ticker from "../components/Ticker.astro";
       </div>
     </section>
     <Ticker />
+    <section class="flex items-center justify-center">
+      <div class="flex flex-col items-center">
+        <h3
+          class="text-2xl uppercase font-semibold text-primary tracking-tight"
+        >
+          Want to chat?
+        </h3>
+        <h4
+          class="text-5xl uppercase font-extrabold text-primary tracking-tight"
+        >
+          Get in touch using the email below.
+        </h4>
+        <button class="email-copy bg-primary flex mt-12 rounded-sm">
+          <p class="uppercase text-dark-green font-semibold py-3 px-4 text-sm">
+            greenfingersfilms@gmail.com
+          </p>
+          <div
+            class="border-dark-green border-l border-opacity-40 flex items-center py-3 px-4"
+          >
+            <p
+              class="uppercase text-dark-green font-medium pr-2 opacity-70 text-xs"
+            >
+              Click to copy
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              class="w-5 fill-current text-dark-green opacity-70"
+              ><path fill="none" d="M0 0h24v24H0z"></path><path
+                d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"
+              ></path></svg
+            >
+          </div>
+        </button>
+      </div>
+    </section>
     <footer class="pt-40">
       <div class="flex">
         <a
@@ -174,6 +212,33 @@ import Ticker from "../components/Ticker.astro";
           >
         </a>
       </div>
+      <div class="flex justify-between items-center py-6 px-8">
+        <p class="text-primary font-light text-[10px] opacity-70">
+          COPYRIGHT GREENFINGERS FILMS 2023©
+        </p>
+        <button
+          class="to-top bg-primary px-2 py-2 flex justify-center items-center rounded-sm"
+        >
+          <p class="text-dark-green uppercase text-xs font-medium pr-1">
+            Back to top
+          </p>
+        </button>
+      </div>
     </footer>
   </main>
 </Layout>
+
+<script>
+  const toTop = document.querySelector(".to-top");
+  toTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  const emailCopy = document.querySelector(".email-copy");
+  emailCopy.addEventListener("click", () => {
+    navigator.clipboard.writeText("greenfingersfilms@gmail.com");
+  });
+</script>
