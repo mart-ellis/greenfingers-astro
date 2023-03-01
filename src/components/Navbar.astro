@@ -2,7 +2,7 @@
 ---
 
 <header
-  class="mt-2 flex justify-between w-[calc(100%-64px)] left-8 bg-custom-black text-primary rounded-lg py-1 fixed top-1 z-50"
+  class="mt-2 flex justify-between bg-custom-black text-primary rounded-lg py-1 fixed top-1 z-50"
 >
   <div class="w-3/12 md:w-2/12 flex justify-center">
     <h1 class="uppercase text-2xl tracking-wide leading-none mt-1 py-1">
@@ -56,3 +56,17 @@
     </a>
   </div>
 </header>
+
+<style>
+  header {
+    width: calc(100% - 2rem);
+    left: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    header {
+      width: calc(100% - 4rem);
+      left: 2rem;
+    }
+  }
+</style>
