@@ -3,7 +3,9 @@ const { text, banner = false, addtionalClasses } = Astro.props;
 ---
 
 <div class={"inline-block relative " + addtionalClasses}>
-  <h1 class="capsizedText font-humane font-bold uppercase text-primary">
+  <h1
+    class="text-9xl md:capsizedText font-humane font-bold uppercase text-primary"
+  >
     {text}
   </h1>
   {
@@ -18,7 +20,7 @@ const { text, banner = false, addtionalClasses } = Astro.props;
 </div>
 
 <style>
-  .capsizedText {
+  /* .capsizedText {
     font-size: 200px;
     line-height: 140px;
   }
@@ -33,5 +35,5 @@ const { text, banner = false, addtionalClasses } = Astro.props;
     content: "";
     margin-top: -0.065em;
     display: table;
-  }
+  } */
 </style>

@@ -4,14 +4,16 @@ import { Image, Picture } from "@astrojs/image/components";
 const { name, picture, bio } = Astro.props.person;
 ---
 
-<div>
+<div class="w-full aspect-square md:w-auto md:aspect-auto">
   <Image
     src={picture}
     alt={`Profile picture of ${name} from Greenfingers Films`}
     format="webp"
     width={390}
     height={425}
-    class="rounded-md"
+    class="rounded-sm md:rounded-md w-full md:w-auto"
   />
-  <h3 class="mt-1 text-lg tracking-tight text-primary">{name}</h3>
+  <h3 class="hidden md:visible mt-1 text-lg tracking-tight text-primary">
+    {name}
+  </h3>
 </div>

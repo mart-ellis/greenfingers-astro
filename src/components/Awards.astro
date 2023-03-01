@@ -4,7 +4,7 @@ const indexes = Astro.props.indexes;
 ---
 
 <div
-  class="w-full flex gap-10 md:gap-14 lg:gap-20 items-center justify-center mt-32 mb-24"
+  class="w-full flex gap-10 md:gap-14 lg:gap-20 items-center justify-center mt-14 mb-16 md:mt-32 md:mb-24"
 >
   {
     indexes.map((i) => (
@@ -14,7 +14,7 @@ const indexes = Astro.props.indexes;
         aspectRatio={1.506}
         sizes="(max-width: 800px) 100vw, 800px"
         alt="descriptive text"
-        class="opacity-20 w-18 md:w-20 lg:w-24"
+        class="opacity-20 w-20 md:w-20 lg:w-24"
       />
     ))
   }

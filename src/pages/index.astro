@@ -15,19 +15,19 @@ import Ticker from "../components/Ticker.astro";
   <Navbar />
 
   <main class="">
-    <section class="h-screen mt-16">
-      <div class="">
+    <section class="h-screen">
+      <div class="pt-24">
         <h1
-          class="uppercase font-humane text-primary text-[35vw] leading-none font-bold"
+          class="uppercase font-humane text-primary text-[58vw] leading-[43vw] md:text-[35vw] font-bold"
         >
-          Greenfingers
+          Green<br class="md:hidden" />fingers
         </h1>
+        <p
+          class="text-primary text-xs md:text-sm font-light tracking-tight ml-4 -mt-4 md:ml-32 md:w-48 leading-4"
+        >
+          Your friendly award-winning film collective.
+        </p>
       </div>
-      <p
-        class="text-primary text-sm font-light -mt-20 tracking-tight ml-32 w-48 leading-4"
-      >
-        Your friendly award-winning film collective.
-      </p>
       <div class="flex items-end absolute bottom-2 gap-3 overflow-hidden">
         <Image
           src="/images/200x300.jpeg"
@@ -88,16 +88,18 @@ import Ticker from "../components/Ticker.astro";
     </section>
     <Awards indexes={[4, 5, 6]} />
     <section class="pt-20">
-      <div class="flex justify-between items-end w-5/6">
+      <div class="flex flex-col md:justify-between md:items-end md:w-5/6">
         <Title text=" Meet the Fingers" addtionalClasses="whitespace-nowrap" />
         <p
-          class="max-w-xs px-6 text-right text-primary opacity-70 tracking-tight text-sm font-light"
+          class="max-w-sm md:max-w-xs md:px-6 md:text-right text-primary opacity-70 tracking-tight text-sm font-light"
         >
           Greenfingers is an internationally award-winning film collective based
           in Manchester. Meet our members below.
         </p>
       </div>
-      <div class="mt-16 grid grid-cols-4 gap-8 max-w-[85vw]">
+      <div
+        class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8 md:max-w-[85vw]"
+      >
         {people.map((person) => <ProfileCard person={person} />)}
       </div>
     </section>
@@ -105,24 +107,26 @@ import Ticker from "../components/Ticker.astro";
     <section class="flex items-center justify-center">
       <div class="flex flex-col items-center">
         <h3
-          class="text-2xl uppercase font-semibold text-primary tracking-tight"
+          class="text-lg md:text-2xl uppercase font-medium md:font-semibold text-primary tracking-tight"
         >
           Want to chat?
         </h3>
         <h4
-          class="text-5xl uppercase font-extrabold text-primary tracking-tight"
+          class="text-3xl text-center md:text-5xl uppercase font-bold md:font-extrabold text-primary tracking-tight"
         >
           Get in touch using the email below.
         </h4>
-        <button class="email-copy bg-primary flex mt-12 rounded-sm">
-          <p class="uppercase text-dark-green font-semibold py-3 px-4 text-sm">
+        <button
+          class="email-copy bg-custom-black text-primary flex items-center mt-12 rounded-sm"
+        >
+          <p class="uppercase font-semibold py-3 px-4 text-xs">
             greenfingersfilms@gmail.com
           </p>
           <div
-            class="border-dark-green border-l border-opacity-40 flex items-center py-3 px-4"
+            class="border-primary border-l border-opacity-10 flex items-center py-3 px-4"
           >
             <p
-              class="uppercase text-dark-green font-medium pr-2 opacity-70 text-xs"
+              class="uppercase font-medium pr-2 opacity-70 text-xs whitespace-nowrap"
             >
               Click to copy
             </p>
@@ -131,7 +135,7 @@ import Ticker from "../components/Ticker.astro";
               viewBox="0 0 24 24"
               width="24"
               height="24"
-              class="w-5 fill-current text-dark-green opacity-70"
+              class="w-5 fill-current opacity-70"
               ><path fill="none" d="M0 0h24v24H0z"></path><path
                 d="M7 6V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7zM5.003 8L5 20h10V8H5.003zM9 6h8v10h2V4H9v2z"
               ></path></svg
@@ -213,13 +217,15 @@ import Ticker from "../components/Ticker.astro";
         </a>
       </div>
       <div class="flex justify-between items-center py-6 px-8">
-        <p class="text-primary font-light text-[10px] opacity-70">
+        <p class="text-primary font-light text-[8px] md:text-[10px] opacity-70">
           COPYRIGHT GREENFINGERS FILMS 2023©
         </p>
         <button
-          class="to-top bg-primary px-2 py-2 flex justify-center items-center rounded-sm"
+          class="to-top bg-primary px-1 py-1 md:px-2 md:py-2 flex justify-center items-center rounded-sm"
         >
-          <p class="text-dark-green uppercase text-xs font-medium pr-1">
+          <p
+            class="text-dark-green uppercase text-[10px] md:text-xs font-medium pr-1"
+          >
             Back to top
           </p>
         </button>
