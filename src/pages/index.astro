@@ -39,7 +39,7 @@ import Ticker from "../components/Ticker.astro";
     </section>
     <Awards indexes={[4, 5, 6]} />
     <section class="pt-20">
-      <div class="flex flex-col md:justify-between md:items-end md:w-5/6">
+      <div class="mb-12 flex flex-col md:justify-between md:items-end md:w-5/6">
         <Title text=" Meet the Fingers" addtionalClasses="whitespace-nowrap" />
         <p
           class="max-w-xs md:px-6 md:text-right text-primary opacity-70 tracking-tight text-xs md:text-sm font-light"
@@ -48,8 +48,13 @@ import Ticker from "../components/Ticker.astro";
           in Manchester. Meet our members below.
         </p>
       </div>
+      <p
+        class="md:hidden text-[10px] text-primary opacity-60 font-thin mb-2 text-right"
+      >
+        (click image to learn more)
+      </p>
       <div
-        class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8 md:max-w-[85vw]"
+        class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-8 md:max-w-[85vw]"
       >
         {people.map((person) => <ProfileCard person={person} />)}
       </div>
