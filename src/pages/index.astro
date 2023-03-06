@@ -15,17 +15,28 @@ import Ticker from "../components/Ticker.astro";
   <Navbar />
 
   <main class="">
-    <section class="h-screen">
-      <div class="pt-32">
+    <section class="h-screen bg-zinc-800 isolate">
+      <video
+        class="object-cover w-screen h-screen absolute top-0 left-0 z-10 opacity-50"
+        playsinline
+        autoplay
+        muted
+        loop
+        id="bgvid"
+      >
+        <source src="/images/TEST.mp4" type="video/mp4" />
+      </video>
+      <div class="relative pt-32 z-20">
         <h1
           class="font-humane uppercase text-primary text-[58vw] leading-[43vw] md:text-[35vw] font-bold"
         >
           Green<br class="md:hidden" />fingers
         </h1>
+
         <p
-          class="text-primary text-xs md:text-sm font-light tracking-tight ml-4 -mt-4 md:ml-32 md:w-48 leading-4"
+          class="uppercase opacity-50 text-primary text-xs md:text-sm font-normal tracking-tight -mt-4 md:ml-32 md:w-48 leading-4"
         >
-          Your friendly award-winning film collective.
+          Your friendly <span class="font-semibold">award-winning</span> film collective.
         </p>
       </div>
       <div class="flex items-end absolute bottom-2 gap-3 overflow-hidden"></div>
@@ -42,7 +53,7 @@ import Ticker from "../components/Ticker.astro";
       <div class="mb-12 flex flex-col md:justify-between md:items-end md:w-5/6">
         <Title text=" Meet the Fingers" addtionalClasses="whitespace-nowrap" />
         <p
-          class="max-w-xs md:px-6 md:text-right text-primary opacity-70 tracking-tight text-xs md:text-sm font-light"
+          class="pr-8 md:px-6 md:text-right text-primary opacity-70 tracking-tight text-sm md:text-sm font-light"
         >
           Greenfingers is an internationally award-winning film collective based
           in Manchester. Meet our members below.
@@ -173,14 +184,14 @@ import Ticker from "../components/Ticker.astro";
         </a>
       </div>
       <div class="flex justify-between items-center py-6 px-8">
-        <p class="text-primary font-light text-[8px] md:text-[10px] opacity-70">
+        <p class="text-primary font-light text-[8px] md:text-[10px] opacity-40">
           COPYRIGHT GREENFINGERS FILMS 2023©
         </p>
         <button
-          class="to-top bg-primary px-1 py-1 md:px-2 md:py-2 flex justify-center items-center rounded-sm"
+          class="to-top px-1 py-1 md:px-2 md:py-2 flex justify-center items-center rounded-sm"
         >
           <p
-            class="text-dark-green uppercase text-[10px] md:text-xs font-medium pr-1"
+            class="text-primary uppercase text-[10px] md:text-xs font-medium pr-1 underline underline-offset-2 opacity-40"
           >
             Back to top
           </p>
