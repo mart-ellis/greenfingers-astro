@@ -15,17 +15,19 @@ const index = Astro.props.index;
   />
   <div class="flex items-center ml-4 -mt-10">
     <h2
-      class="text-5xl text-transparent font-black tracking-tight text-outline pr-1"
+      class="text-4xl md:text-5xl text-transparent font-black tracking-tight text-outline pr-1"
     >
       0{index + 1}
     </h2>
     <div class="text-white flex flex-col pt-1">
       <h2
-        class="leading-none text-3xl font-bold tracking-tighter whitespace-nowrap"
+        class="leading-none text-2xl md:text-3xl font-bold tracking-tighter whitespace-nowrap"
       >
         {title}
       </h2>
-      <p class="leading-none font-medium tracking-tighter self-end mr-10">
+      <p
+        class="text-sm md:text-base leading-none font-medium tracking-tighter self-end mr-10"
+      >
         {year}
       </p>
     </div>

@@ -15,17 +15,24 @@ import Ticker from "../components/Ticker.astro";
   <Navbar />
 
   <main class="">
-    <section class="h-screen bg-zinc-800 isolate">
-      <video
-        class="object-cover w-screen h-screen absolute top-0 left-0 z-10 opacity-50"
-        playsinline
-        autoplay
-        muted
-        loop
-        id="bgvid"
-      >
-        <source src="/images/TEST (2).mp4" type="video/mp4" />
-      </video>
+    <section class="h-[110vh]">
+      <div class="absolute top-0 h-[110vh] left-0">
+        <video
+          class="object-cover h-[110vh] z-10"
+          playsinline
+          autoplay
+          muted
+          loop
+          id="bgvid"
+        >
+          <source src="/images/neigh.mp4" type="video/mp4" />
+        </video>
+        <div class="bg-black w-full h-[110vh] absolute top-0 opacity-50"></div>
+        <div
+          class="absolute bottom-0 h-[10vh] w-full bg-gradient-to-b from-transparent to-dark-green"
+        >
+        </div>
+      </div>
       <div class="relative pt-32 z-20">
         <h1
           class="font-humane uppercase text-primary text-[58vw] leading-[43vw] md:text-[35vw] font-bold"
@@ -79,21 +86,21 @@ import Ticker from "../components/Ticker.astro";
           Want to chat?
         </h3>
         <h4
-          class="text-3xl text-center md:text-5xl uppercase font-bold md:font-extrabold text-primary tracking-tight"
+          class="text-2xl text-center md:text-5xl uppercase font-bold md:font-extrabold text-primary tracking-tight"
         >
           Get in touch using the email below.
         </h4>
         <button
           class="email-copy bg-custom-black text-primary flex items-center mt-12 rounded-sm"
         >
-          <p class="uppercase font-semibold py-3 px-4 text-xs">
+          <p class="uppercase font-semibold py-3 px-4 text-[10px] md:text-xs">
             greenfingersfilms@gmail.com
           </p>
           <div
             class="border-primary border-l border-opacity-10 flex items-center py-3 px-4"
           >
             <p
-              class="uppercase font-medium pr-2 opacity-70 text-xs whitespace-nowrap"
+              class="uppercase font-medium pr-2 opacity-70 text-[10px] md:text-xs whitespace-nowrap"
             >
               Click to copy
             </p>
